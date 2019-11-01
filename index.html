@@ -5,7 +5,7 @@
     <title>Password generator</title>
     <script>
         function refreshPassword() {
-            document.getElementById('password').innerText = Math.random().toString(36).substring(2, 15)
+            document.getElementById('password').innerText = btoa(Math.random().toString(36).substring(2, 15)).substring(0, 14)
         }
     </script>
     <style>
