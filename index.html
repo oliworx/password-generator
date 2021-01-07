@@ -2,10 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Password generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'none'; base-uri 'self'; form-action 'none'; script-src 'unsafe-inline'; object-src 'none'; style-src 'unsafe-inline'; img-src 'none'; media-src 'none'; frame-src 'none'; frame-ancestors 'none'; font-src 'none'; connect-src 'none'">
+
+    <title>free online password generator</title>
     <script>
         function refreshPassword() {
             document.getElementById('password').innerText = btoa(Math.random().toString(36).substring(2, 15)).substring(0, 14)
+            return false
         }
     </script>
     <style>
@@ -51,7 +57,6 @@
             margin: auto;
         }
         .push_button {
-            position: relative;
             width:220px;
             height:40px;
             text-align:center;
@@ -60,7 +65,7 @@
             line-height:43px;
             font-family:'Oswald', Helvetica;
             display: block;
-            margin: 30px;
+            margin: 1em auto;
         }
         .push_button:before {
             background:#f0f0f0;
@@ -98,18 +103,14 @@
 <body onload="refreshPassword()">
 <header>
     <h1>Online password generator</h1>
-
 </header>
 <section>
+    This password is generated in your browser only and not going anywhere:
     <div id="password"></div>
-
-    <center>
-        <a class="push_button blue" onclick="refreshPassword();" href="#">generate a new password</a>
-    </center>
-
+    <a class="push_button blue" onclick="return refreshPassword();" href="#">generate a new password</a>
 </section>
 <footer>
-    © 2019 Oliver Kurmis &lt;oliver@kurmis.com&gt;
+    © 2021 Oliver Kurmis &lt;oliver@kurmis.com&gt;
     | <a href="https://github.com/oliworx/password-generator">clone on GitHub</a>
 </footer>
 </body>
