@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="no-referrer">
-    <meta name="description" content="Free and secure passord generator in your browser, respecting your privacy">
+    <meta name="description" content="Free and secure password generator in your browser, respecting your privacy">
     <meta http-equiv="Content-Security-Policy"
           content="default-src 'none'; base-uri 'self'; form-action 'none'; script-src 'unsafe-inline'; object-src 'none'; style-src 'unsafe-inline'; img-src 'none'; media-src 'none'; frame-src 'none'; frame-ancestors 'none'; font-src 'none'; connect-src 'self'">
 
@@ -46,16 +46,13 @@
         #password {
             font-size: large;
             font-weight: bold;
-            font-family: Courier, "Droid Sans Mono", Monospaced;
+            font-family: Courier, "Droid Sans Mono", monospace;
             background: #ddd;
             border: #888 solid;
             border-radius: 5px;
             margin: auto;
             padding: 30px;
             width: 200px;
-        }
-        div.btn {
-            margin: auto;
         }
         .push_button {
             width:220px;
@@ -64,7 +61,7 @@
             color:#FFF;
             text-decoration:none;
             line-height:43px;
-            font-family:'Oswald', Helvetica;
+            font-family:'Oswald', Helvetica,sans-serif;
             display: block;
             margin: 1em auto;
         }
@@ -89,15 +86,13 @@
         }
         .blue {
             text-shadow:-1px -1px 0 #2C7982;
-            background: #3EACBA;
             border:1px solid #379AA4;
-            background-image:linear-gradient(to top, #48C6D4, #3EACBA);
+            background: #3EACBA linear-gradient(to top, #48C6D4, #3EACBA);
             border-radius:5px;
             box-shadow:0 1px 0 rgba(255, 255, 255, .5) inset, 0 -1px 0 rgba(255, 255, 255, .1) inset, 0 4px 0 #338A94, 0 4px 2px rgba(0, 0, 0, .5);
         }
         .blue:hover {
-            background: #48C6D4;
-            background-image:linear-gradient(to top, #3EACBA, #48C6D4);
+            background: #48C6D4 linear-gradient(to top, #3EACBA, #48C6D4);
         }
     </style>
 </head>
