@@ -11,7 +11,7 @@
     <title>free online password generator</title>
     <script>
         function refreshPassword() {
-            document.getElementById('password').innerText = btoa(Math.random().toString(36).substring(2, 15)).substring(0, 14)
+            document.getElementById('password').innerText = btoa(self.crypto.getRandomValues(new BigUint64Array(1))[0].toString(36)).substring(0, 16)
             return false
         }
     </script>
@@ -106,7 +106,7 @@
     <a class="push_button blue" onclick="return refreshPassword();" href="#">generate a new password</a>
 </section>
 <footer>
-    © 2021 Oliver Kurmis &lt;oliver@kurmis.com&gt;
+    © 2024 Oliver Kurmis &lt;oliver@kurmis.com&gt;
     | <a href="https://github.com/oliworx/password-generator">clone on GitHub</a>
 </footer>
 </body>
